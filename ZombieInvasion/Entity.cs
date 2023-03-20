@@ -8,16 +8,26 @@ namespace ZombieInvasion
 {
     public abstract class Entity
     {
-        protected double x, y;
-        protected double health;
-        protected double maxSpeed;
-        protected double xSpeed, ySpeed;
+        public double x, y;
+        public double health;
+        public double maxSpeed;
+        public double xSpeed, ySpeed;
 
         public abstract bool Attack(Entity target);
+        public void Move()
+        {
+            x += xSpeed;
+            y += ySpeed;
+        }
+        public double Distance(double x2, double y2)
+        {
+            return ((x2 - x) * (x2 - x)) + ((y2 - y) * (y2 - y));
+        }
     }
 
     public class Player : Entity
     {
+        public int viewRange = 100;
         private int ammoCount;
         double money;
         

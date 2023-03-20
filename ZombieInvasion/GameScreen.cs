@@ -12,15 +12,15 @@ namespace ZombieInvasion
 {
     public partial class GameScreen : UserControl
     {
-        int mapSize = 250;
+        int mapSize = 750;
         Map map;
         Player player;
         Pen whitePen = new Pen(Color.White);
         bool[] keyPressed = new bool[4];
         public GameScreen()
         {
-            map = new Map(mapSize, 12);
-            player = new Player(mapSize / 2, mapSize / 2, 100, 1.25, 50, 30);
+            map = new Map(mapSize, 35);
+            player = new Player(mapSize / 2, mapSize / 2, 100, 0.15, 50, 30);
             InitializeComponent();
         }
 

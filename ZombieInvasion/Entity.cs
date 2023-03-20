@@ -27,7 +27,7 @@ namespace ZombieInvasion
 
     public class Player : Entity
     {
-        public int viewRange = 100;
+        public int viewRange = 20;
         private int ammoCount;
         double money;
         
